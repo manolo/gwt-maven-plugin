@@ -246,6 +246,7 @@ public class CompileMojo
      * modules that don't define any dependencies.
      *
      * @since 2.6.0-rc1
+     * @deprecated since 2.8.0-beta1, specifying it doesn't have any effect
      */
     @Parameter(defaultValue = "false", property = "gwt.compiler.enforceStrictResources")
     private boolean enforceStrictResources;
@@ -435,7 +436,6 @@ public class CompileMojo
             .arg( compilerMetrics, "-XcompilerMetrics" )
             .arg( "-XfragmentCount", String.valueOf( fragmentCount ) )
             .arg( !clusterFunctions, "-XnoclusterFunctions" )
-            .arg( enforceStrictResources, "-XenforceStrictResources" )
             .arg( !inlineLiteralParameters, "-XnoinlineLiteralParameters" )
             .arg( !optimizeDataflow, "-XnooptimizeDataflow" )
             .arg( !ordinalizeEnums, "-XnoordinalizeEnums" )
